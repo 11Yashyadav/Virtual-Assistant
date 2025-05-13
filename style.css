@@ -26,6 +26,37 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+.vsec {
+  float: left; /* Align video to the left */
+  max-width: 90%;
+  max-height: 100%;
+  margin-right: 8%;
+}
+
+@keyframes border-move {
+  0% {
+    box-shadow: -10px 0 15px rgba(128, 0, 255, 0.6),
+      10px 0 15px rgba(179, 0, 255, 0.4);
+  }
+  25% {
+    box-shadow: 0 -10px 15px rgba(128, 0, 255, 0.5),
+      0 10px 15px rgba(179, 0, 255, 0.3);
+  }
+  50% {
+    box-shadow: 10px 0 15px rgba(128, 0, 255, 0.6),
+      -10px 0 15px rgba(179, 0, 255, 0.4);
+  }
+  75% {
+    box-shadow: 0 10px 15px rgba(128, 0, 255, 0.5),
+      0 -10px 15px rgba(179, 0, 255, 0.3);
+  }
+  100% {
+    box-shadow: -10px 0 15px rgba(128, 0, 255, 0.6),
+      10px 0 15px rgba(179, 0, 255, 0.4);
+  }
+}
+
 .container {
   padding: 40px;
   position: absolute;
@@ -75,4 +106,18 @@ p {
 .listening {
   animation: pulse 1s infinite;
   background-color: #ff6347;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
