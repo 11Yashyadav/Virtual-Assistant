@@ -29,5 +29,26 @@ btn.addEventListener("click", function () {
     } else if (command.includes("open whatsapp")) {
       speak("Opening WhatsApp...");
       window.open("https://www.whatsapp.com", "_blank");
+    } else {
+      // Perform a Google search if command not recognized
+      speak("Searching Google for " + command);
+      window.open(
+        `https://www.google.com/search?q=${encodeURIComponent(command)}`,
+        "_blank"
+      );
     }
   }
+
+  // When a result is received
+  recognition.onresult = (event) => {
+    console.log(event);
+    const command = event.results[0][0].transcript.toLowerCase();
+    handleCommand(command);
+  };
+
+  // When recognition ends
+  recognition.onend = () => {
+    btn.innerHTML = "Start Listening";
+    btn.classList.remove("listening");
+  };
+});
