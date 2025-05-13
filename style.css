@@ -19,6 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  /* background-image: url("./speak.gif"); */
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,6 +33,8 @@ body {
   float: left; /* Align video to the left */
   max-width: 100%;
   max-height: 100%;
+  overflow: hidden; /* Hide any video overflow */
+  z-index: -1;
 }
 
 @keyframes border-move {
@@ -55,12 +59,18 @@ body {
       10px 0 15px rgba(179, 0, 255, 0.4);
   }
 }
-
+.subheading {
+  font-size: 1.2em;
+  color: #aaa; /* Adjust color */
+  margin-bottom: 10px;
+  font-weight: normal; /* Or a lighter font weight */
+}
 .container {
   padding: 40px;
   position: absolute;
-  height: 27%;
+  height: 30%;
   left: 17%;
+  z-index: 1;
   background-image: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.5),
