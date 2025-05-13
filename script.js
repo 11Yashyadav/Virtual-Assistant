@@ -39,6 +39,9 @@ btn.addEventListener("click", function () {
     }
   }
 
+  // Greet the user and then start listening
+  speak("Hello I'm TalkieTech build by Yash Yadav, how can I help you?");
+
   // When a result is received
   recognition.onresult = (event) => {
     console.log(event);
