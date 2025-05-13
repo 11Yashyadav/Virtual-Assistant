@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.925);
+  position: relative;
+  overflow: hidden;
+}
+.container {
+  padding: 40px;
+  position: absolute;
+  height: 27%;
+  left: 17%;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.5),
+    rgba(65, 65, 39, 0.5)
+  );
+  background-color: rgba(27, 4, 56, 0.4);
+  border-radius: 15px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: border-move 3s infinite linear;
+}
+
+h1 {
+  font-size: 35px;
+  font-family: "Roboto";
+}
+
+p {
+  color: orange;
+  font-size: 18px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.listening {
+  animation: pulse 1s infinite;
+  background-color: #ff6347;
+}
